@@ -8,30 +8,29 @@
 import Foundation
 
 enum VO2EndPoints: EndpointType {
-    case getCharacters
-    case getLocations
-    case getEpisodes
+    case getPopularMovies
     
     var path: String {
         switch self {
-        case .getCharacters:
-            return "/character"
-        case .getLocations:
-            return "/location"
-        case .getEpisodes:
-            return "/episode"
+        case .getPopularMovies:
+            return "\(version)/movie/popular"
         }
     }
     
     var verb: HTTPVerb {
         switch self {
-        case .getCharacters, .getLocations, .getEpisodes:
+        case .getPopularMovies:
             return .get
         }
     }
     var baseUrl: URL {
-        guard let url = URL(string: "https://rickandmortyapi.com/api")
+        guard let url = URL(string: "https://api.themoviedb.org/")
         else { fatalError("Invalid url") }
         return url
+    }
+    var version: Int {
+        switch self {
+        default: return 3
+        }
     }
 }

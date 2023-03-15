@@ -1,5 +1,5 @@
 //
-//  VideoNetworkService.swift
+//  MoviesMockedService.swift
 //  VO2Video
 //
 //  Created by Thejus on 15/03/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class VideoNetworkService: VideoService {
+class MoviesMockedService: MoviesService {
     
     var networkClient: VO2NetworkClient?
     
@@ -15,4 +15,6 @@ class VideoNetworkService: VideoService {
         self.networkClient = networkClient
     }
     
+    func getPopularMovies(pageNo: Int, completion: @escaping ResultCallback<VO2Data<Movies>>) {
+    }
 }

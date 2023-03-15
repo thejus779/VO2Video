@@ -19,9 +19,9 @@
 		140E876929C1E35400E359CD /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 140E876829C1E35400E359CD /* RswiftLibrary */; };
 		140E876E29C1E3A800E359CD /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E876D29C1E3A800E359CD /* Engine.swift */; };
 		140E877529C1E42F00E359CD /* VO2Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E877429C1E42F00E359CD /* VO2Error.swift */; };
-		140E877729C1E45C00E359CD /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E877629C1E45C00E359CD /* VideoService.swift */; };
-		140E877929C1E47100E359CD /* VideoNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E877829C1E47100E359CD /* VideoNetworkService.swift */; };
-		140E877B29C1E48F00E359CD /* VideoMockedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E877A29C1E48F00E359CD /* VideoMockedService.swift */; };
+		140E877729C1E45C00E359CD /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E877629C1E45C00E359CD /* MoviesService.swift */; };
+		140E877929C1E47100E359CD /* MoviesNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E877829C1E47100E359CD /* MoviesNetworkService.swift */; };
+		140E877B29C1E48F00E359CD /* MoviesMockedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E877A29C1E48F00E359CD /* MoviesMockedService.swift */; };
 		140E879429C1E4F800E359CD /* VO2EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E878429C1E4F800E359CD /* VO2EndPoints.swift */; };
 		140E879529C1E4F800E359CD /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E878529C1E4F800E359CD /* EndPointType.swift */; };
 		140E879629C1E4F800E359CD /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E878729C1E4F800E359CD /* NetworkClient.swift */; };
@@ -38,6 +38,9 @@
 		140E87D929C1EA2A00E359CD /* Spawnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87AC29C1EA2A00E359CD /* Spawnable.swift */; };
 		140E87EC29C1ECF700E359CD /* VO2TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87EB29C1ECF700E359CD /* VO2TabController.swift */; };
 		140E87F329C1EF6B00E359CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 140E87F129C1EF6B00E359CD /* Localizable.strings */; };
+		140E87FD29C1F78B00E359CD /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87FC29C1F78B00E359CD /* MoviesModel.swift */; };
+		140E880129C1F87B00E359CD /* VO2Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E880029C1F87B00E359CD /* VO2Data.swift */; };
+		140E880329C201FE00E359CD /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E880229C201FE00E359CD /* Results.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,9 +75,9 @@
 		140E875429C1D88B00E359CD /* VO2VideoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VO2VideoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		140E876D29C1E3A800E359CD /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		140E877429C1E42F00E359CD /* VO2Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VO2Error.swift; sourceTree = "<group>"; };
-		140E877629C1E45C00E359CD /* VideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoService.swift; sourceTree = "<group>"; };
-		140E877829C1E47100E359CD /* VideoNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNetworkService.swift; sourceTree = "<group>"; };
-		140E877A29C1E48F00E359CD /* VideoMockedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoMockedService.swift; sourceTree = "<group>"; };
+		140E877629C1E45C00E359CD /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
+		140E877829C1E47100E359CD /* MoviesNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesNetworkService.swift; sourceTree = "<group>"; };
+		140E877A29C1E48F00E359CD /* MoviesMockedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesMockedService.swift; sourceTree = "<group>"; };
 		140E878429C1E4F800E359CD /* VO2EndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VO2EndPoints.swift; sourceTree = "<group>"; };
 		140E878529C1E4F800E359CD /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		140E878729C1E4F800E359CD /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -91,6 +94,9 @@
 		140E87AC29C1EA2A00E359CD /* Spawnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spawnable.swift; sourceTree = "<group>"; };
 		140E87EB29C1ECF700E359CD /* VO2TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VO2TabController.swift; sourceTree = "<group>"; };
 		140E87F229C1EF6B00E359CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
+		140E87FC29C1F78B00E359CD /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
+		140E880029C1F87B00E359CD /* VO2Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VO2Data.swift; sourceTree = "<group>"; };
+		140E880229C201FE00E359CD /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,7 @@
 		140E876B29C1E39200E359CD /* EngineModule */ = {
 			isa = PBXGroup;
 			children = (
+				140E87FA29C1F6C500E359CD /* Models */,
 				140E878129C1E4F800E359CD /* Network Capabilities */,
 				140E877329C1E42400E359CD /* Utils */,
 				140E876F29C1E3BB00E359CD /* Service */,
@@ -207,33 +214,34 @@
 		140E877029C1E3D100E359CD /* VideoService */ = {
 			isa = PBXGroup;
 			children = (
-				140E877229C1E3F900E359CD /* VideoMockedService */,
-				140E877129C1E3ED00E359CD /* VideoNetworkService */,
-				140E877629C1E45C00E359CD /* VideoService.swift */,
+				140E877229C1E3F900E359CD /* MoviesMockedService */,
+				140E877129C1E3ED00E359CD /* MoviesNetworkService */,
+				140E877629C1E45C00E359CD /* MoviesService.swift */,
 			);
 			path = VideoService;
 			sourceTree = "<group>";
 		};
-		140E877129C1E3ED00E359CD /* VideoNetworkService */ = {
+		140E877129C1E3ED00E359CD /* MoviesNetworkService */ = {
 			isa = PBXGroup;
 			children = (
-				140E877829C1E47100E359CD /* VideoNetworkService.swift */,
+				140E877829C1E47100E359CD /* MoviesNetworkService.swift */,
 			);
-			path = VideoNetworkService;
+			path = MoviesNetworkService;
 			sourceTree = "<group>";
 		};
-		140E877229C1E3F900E359CD /* VideoMockedService */ = {
+		140E877229C1E3F900E359CD /* MoviesMockedService */ = {
 			isa = PBXGroup;
 			children = (
-				140E877A29C1E48F00E359CD /* VideoMockedService.swift */,
+				140E877A29C1E48F00E359CD /* MoviesMockedService.swift */,
 			);
-			path = VideoMockedService;
+			path = MoviesMockedService;
 			sourceTree = "<group>";
 		};
 		140E877329C1E42400E359CD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				140E877429C1E42F00E359CD /* VO2Error.swift */,
+				140E880229C201FE00E359CD /* Results.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -357,6 +365,31 @@
 				140E873529C1D88900E359CD /* HomeViewController.swift */,
 			);
 			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		140E87FA29C1F6C500E359CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				140E87FF29C1F86E00E359CD /* VO2Data */,
+				140E87FB29C1F6CC00E359CD /* Movies */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		140E87FB29C1F6CC00E359CD /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				140E87FC29C1F78B00E359CD /* MoviesModel.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		140E87FF29C1F86E00E359CD /* VO2Data */ = {
+			isa = PBXGroup;
+			children = (
+				140E880029C1F87B00E359CD /* VO2Data.swift */,
+			);
+			path = VO2Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,13 +533,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				140E877B29C1E48F00E359CD /* VideoMockedService.swift in Sources */,
+				140E877B29C1E48F00E359CD /* MoviesMockedService.swift in Sources */,
 				140E879629C1E4F800E359CD /* NetworkClient.swift in Sources */,
 				140E87D729C1EA2A00E359CD /* Representables.swift in Sources */,
 				140E87D329C1EA2A00E359CD /* AppCoordinator.swift in Sources */,
 				140E873629C1D88900E359CD /* HomeViewController.swift in Sources */,
 				140E87EC29C1ECF700E359CD /* VO2TabController.swift in Sources */,
 				140E879529C1E4F800E359CD /* EndPointType.swift in Sources */,
+				140E880129C1F87B00E359CD /* VO2Data.swift in Sources */,
 				140E87D029C1EA2A00E359CD /* UIActivityIndicator+Extensions.swift in Sources */,
 				140E876E29C1E3A800E359CD /* Engine.swift in Sources */,
 				140E87D929C1EA2A00E359CD /* Spawnable.swift in Sources */,
@@ -517,11 +551,13 @@
 				140E87D129C1EA2A00E359CD /* Reusable.swift in Sources */,
 				140E87CF29C1EA2A00E359CD /* HideBackTitleNavigationController.swift in Sources */,
 				140E87D229C1EA2A00E359CD /* UIViewController+Alerts.swift in Sources */,
-				140E877929C1E47100E359CD /* VideoNetworkService.swift in Sources */,
-				140E877729C1E45C00E359CD /* VideoService.swift in Sources */,
+				140E877929C1E47100E359CD /* MoviesNetworkService.swift in Sources */,
+				140E877729C1E45C00E359CD /* MoviesService.swift in Sources */,
 				140E879429C1E4F800E359CD /* VO2EndPoints.swift in Sources */,
+				140E87FD29C1F78B00E359CD /* MoviesModel.swift in Sources */,
 				140E879729C1E4F800E359CD /* VO2NetworkClient.swift in Sources */,
 				140E87D429C1EA2A00E359CD /* HomeCoordinator.swift in Sources */,
+				140E880329C201FE00E359CD /* Results.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,10 +12,10 @@ class Engine {
     private let networkClient: NetworkClient
     
     // Services
-    let videoService: VideoService
+    let moviesService: MoviesService
     
     init(
-        mockVideoService: VideoService? = nil,
+        mockMoviesService: MoviesService? = nil,
         mockNetworkClient: VO2NetworkClient? = nil
     ) {
         // Network client
@@ -23,6 +23,6 @@ class Engine {
         self.networkClient = networkClient
         
         // VideoService
-        self.videoService = mockVideoService ?? VideoNetworkService(networkClient: networkClient)
+        self.moviesService = mockMoviesService ?? MoviesNetworkService(networkClient: networkClient)
     }
 }
