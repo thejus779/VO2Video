@@ -2,7 +2,7 @@
 //  MovieProtocol.swift
 //  VO2Video
 //
-//  Created by Shiny on 15/03/2023.
+//  Created by Thejus on 15/03/2023.
 //
 
 import Foundation

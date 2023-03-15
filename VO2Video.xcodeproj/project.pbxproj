@@ -12,7 +12,7 @@
 		140E873929C1D88900E359CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140E873729C1D88900E359CD /* Main.storyboard */; };
 		140E873B29C1D88B00E359CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140E873A29C1D88B00E359CD /* Assets.xcassets */; };
 		140E873E29C1D88B00E359CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140E873C29C1D88B00E359CD /* LaunchScreen.storyboard */; };
-		140E874929C1D88B00E359CD /* VO2VideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E874829C1D88B00E359CD /* VO2VideoTests.swift */; };
+		140E874929C1D88B00E359CD /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E874829C1D88B00E359CD /* HomeViewModelTests.swift */; };
 		140E875329C1D88B00E359CD /* VO2VideoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E875229C1D88B00E359CD /* VO2VideoUITests.swift */; };
 		140E875529C1D88B00E359CD /* VO2VideoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E875429C1D88B00E359CD /* VO2VideoUITestsLaunchTests.swift */; };
 		140E876329C1E1D000E359CD /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 140E876229C1E1D000E359CD /* SDWebImage */; };
@@ -87,7 +87,7 @@
 		140E873D29C1D88B00E359CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		140E873F29C1D88B00E359CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		140E874429C1D88B00E359CD /* VO2VideoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VO2VideoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		140E874829C1D88B00E359CD /* VO2VideoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VO2VideoTests.swift; sourceTree = "<group>"; };
+		140E874829C1D88B00E359CD /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		140E874E29C1D88B00E359CD /* VO2VideoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VO2VideoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		140E875229C1D88B00E359CD /* VO2VideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VO2VideoUITests.swift; sourceTree = "<group>"; };
 		140E875429C1D88B00E359CD /* VO2VideoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VO2VideoUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		140E874729C1D88B00E359CD /* VO2VideoTests */ = {
 			isa = PBXGroup;
 			children = (
-				140E874829C1D88B00E359CD /* VO2VideoTests.swift */,
+				140E874829C1D88B00E359CD /* HomeViewModelTests.swift */,
 				140E884E29C2866A00E359CD /* MovieServiceTest.swift */,
 			);
 			path = VO2VideoTests;
@@ -733,7 +733,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140E884F29C2866A00E359CD /* MovieServiceTest.swift in Sources */,
-				140E874929C1D88B00E359CD /* VO2VideoTests.swift in Sources */,
+				140E874929C1D88B00E359CD /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
