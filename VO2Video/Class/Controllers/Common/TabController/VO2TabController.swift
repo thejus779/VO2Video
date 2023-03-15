@@ -24,10 +24,10 @@ class VO2TabController: UITabBarController {
         super.viewDidLoad()
         
         let item = UITabBarItemAppearance()
-        item.normal.titleTextAttributes = [.foregroundColor: UIColor.darkGray]
-        item.normal.iconColor = UIColor.darkGray
-        item.selected.titleTextAttributes = [.foregroundColor: UIColor.blue]
-        item.selected.iconColor = UIColor.blue
+        item.normal.titleTextAttributes = [.foregroundColor: UIColor.lightGray]
+        item.normal.iconColor = UIColor.lightGray
+        item.selected.titleTextAttributes = [.foregroundColor: UIColor.darkGray]
+        item.selected.iconColor = UIColor.darkGray
         
         let app = UITabBarAppearance()
         app.configureWithOpaqueBackground()

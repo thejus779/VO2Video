@@ -29,18 +29,25 @@
 		140E87CE29C1EA2A00E359CD /* UIViewController+Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E879F29C1EA2A00E359CD /* UIViewController+Shadows.swift */; };
 		140E87CF29C1EA2A00E359CD /* HideBackTitleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87A029C1EA2A00E359CD /* HideBackTitleNavigationController.swift */; };
 		140E87D029C1EA2A00E359CD /* UIActivityIndicator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87A129C1EA2A00E359CD /* UIActivityIndicator+Extensions.swift */; };
-		140E87D129C1EA2A00E359CD /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87A229C1EA2A00E359CD /* Reusable.swift */; };
 		140E87D229C1EA2A00E359CD /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87A329C1EA2A00E359CD /* UIViewController+Alerts.swift */; };
 		140E87D329C1EA2A00E359CD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87A529C1EA2A00E359CD /* AppCoordinator.swift */; };
 		140E87D429C1EA2A00E359CD /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87A629C1EA2A00E359CD /* HomeCoordinator.swift */; };
 		140E87D729C1EA2A00E359CD /* Representables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87AA29C1EA2A00E359CD /* Representables.swift */; };
-		140E87D829C1EA2A00E359CD /* ShadowWrapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87AB29C1EA2A00E359CD /* ShadowWrapped.swift */; };
 		140E87D929C1EA2A00E359CD /* Spawnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87AC29C1EA2A00E359CD /* Spawnable.swift */; };
 		140E87EC29C1ECF700E359CD /* VO2TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87EB29C1ECF700E359CD /* VO2TabController.swift */; };
 		140E87F329C1EF6B00E359CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 140E87F129C1EF6B00E359CD /* Localizable.strings */; };
 		140E87FD29C1F78B00E359CD /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87FC29C1F78B00E359CD /* MoviesModel.swift */; };
 		140E880129C1F87B00E359CD /* VO2Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E880029C1F87B00E359CD /* VO2Data.swift */; };
 		140E880329C201FE00E359CD /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E880229C201FE00E359CD /* Results.swift */; };
+		140E880829C2079300E359CD /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E880729C2079300E359CD /* Encodable+Extensions.swift */; };
+		140E880B29C2081E00E359CD /* MoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E880A29C2081E00E359CD /* MoviesRequest.swift */; };
+		140E880D29C21EDD00E359CD /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E880C29C21EDD00E359CD /* UICollectionView+Extension.swift */; };
+		140E881129C2201900E359CD /* MoviesGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E881029C2201900E359CD /* MoviesGridCell.swift */; };
+		140E881329C221DC00E359CD /* Reusables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E881229C221DC00E359CD /* Reusables.swift */; };
+		140E881A29C2233200E359CD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E881929C2233200E359CD /* HomeViewModel.swift */; };
+		140E881C29C230A000E359CD /* MoviesGridCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E881B29C230A000E359CD /* MoviesGridCellViewModel.swift */; };
+		140E882029C234A500E359CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E881F29C234A500E359CD /* Constants.swift */; };
+		140E882429C2354F00E359CD /* ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E882329C2354F00E359CD /* ImageSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,18 +92,25 @@
 		140E879F29C1EA2A00E359CD /* UIViewController+Shadows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Shadows.swift"; sourceTree = "<group>"; };
 		140E87A029C1EA2A00E359CD /* HideBackTitleNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideBackTitleNavigationController.swift; sourceTree = "<group>"; };
 		140E87A129C1EA2A00E359CD /* UIActivityIndicator+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicator+Extensions.swift"; sourceTree = "<group>"; };
-		140E87A229C1EA2A00E359CD /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		140E87A329C1EA2A00E359CD /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		140E87A529C1EA2A00E359CD /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		140E87A629C1EA2A00E359CD /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		140E87AA29C1EA2A00E359CD /* Representables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Representables.swift; sourceTree = "<group>"; };
-		140E87AB29C1EA2A00E359CD /* ShadowWrapped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowWrapped.swift; sourceTree = "<group>"; };
 		140E87AC29C1EA2A00E359CD /* Spawnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spawnable.swift; sourceTree = "<group>"; };
 		140E87EB29C1ECF700E359CD /* VO2TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VO2TabController.swift; sourceTree = "<group>"; };
 		140E87F229C1EF6B00E359CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
 		140E87FC29C1F78B00E359CD /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
 		140E880029C1F87B00E359CD /* VO2Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VO2Data.swift; sourceTree = "<group>"; };
 		140E880229C201FE00E359CD /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		140E880729C2079300E359CD /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		140E880A29C2081E00E359CD /* MoviesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRequest.swift; sourceTree = "<group>"; };
+		140E880C29C21EDD00E359CD /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		140E881029C2201900E359CD /* MoviesGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesGridCell.swift; sourceTree = "<group>"; };
+		140E881229C221DC00E359CD /* Reusables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusables.swift; sourceTree = "<group>"; };
+		140E881929C2233200E359CD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		140E881B29C230A000E359CD /* MoviesGridCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesGridCellViewModel.swift; sourceTree = "<group>"; };
+		140E881F29C234A500E359CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		140E882329C2354F00E359CD /* ImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +238,7 @@
 		140E877129C1E3ED00E359CD /* MoviesNetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				140E880929C2081600E359CD /* Network */,
 				140E877829C1E47100E359CD /* MoviesNetworkService.swift */,
 			);
 			path = MoviesNetworkService;
@@ -242,6 +257,7 @@
 			children = (
 				140E877429C1E42F00E359CD /* VO2Error.swift */,
 				140E880229C201FE00E359CD /* Results.swift */,
+				140E881F29C234A500E359CD /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -296,11 +312,13 @@
 		140E879E29C1EA2A00E359CD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				140E880C29C21EDD00E359CD /* UICollectionView+Extension.swift */,
 				140E879F29C1EA2A00E359CD /* UIViewController+Shadows.swift */,
 				140E87A029C1EA2A00E359CD /* HideBackTitleNavigationController.swift */,
 				140E87A129C1EA2A00E359CD /* UIActivityIndicator+Extensions.swift */,
-				140E87A229C1EA2A00E359CD /* Reusable.swift */,
 				140E87A329C1EA2A00E359CD /* UIViewController+Alerts.swift */,
+				140E880729C2079300E359CD /* Encodable+Extensions.swift */,
+				140E881229C221DC00E359CD /* Reusables.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,7 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				140E87AA29C1EA2A00E359CD /* Representables.swift */,
-				140E87AB29C1EA2A00E359CD /* ShadowWrapped.swift */,
 				140E87AC29C1EA2A00E359CD /* Spawnable.swift */,
 			);
 			path = Protocols;
@@ -327,8 +344,9 @@
 		140E87AD29C1EA2A00E359CD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				140E87F729C1F22F00E359CD /* HomeViewController */,
-				140E87EA29C1ECD700E359CD /* TabController */,
+				140E873729C1D88900E359CD /* Main.storyboard */,
+				140E881629C2230800E359CD /* 1-Home */,
+				140E881729C2231800E359CD /* Common */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -361,7 +379,8 @@
 		140E87F729C1F22F00E359CD /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				140E873729C1D88900E359CD /* Main.storyboard */,
+				140E881829C2232A00E359CD /* ViewModel */,
+				140E880F29C21FF800E359CD /* Cells */,
 				140E873529C1D88900E359CD /* HomeViewController.swift */,
 			);
 			path = HomeViewController;
@@ -370,6 +389,7 @@
 		140E87FA29C1F6C500E359CD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				140E882229C2354600E359CD /* Common */,
 				140E87FF29C1F86E00E359CD /* VO2Data */,
 				140E87FB29C1F6CC00E359CD /* Movies */,
 			);
@@ -390,6 +410,55 @@
 				140E880029C1F87B00E359CD /* VO2Data.swift */,
 			);
 			path = VO2Data;
+			sourceTree = "<group>";
+		};
+		140E880929C2081600E359CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				140E880A29C2081E00E359CD /* MoviesRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		140E880F29C21FF800E359CD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				140E881029C2201900E359CD /* MoviesGridCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		140E881629C2230800E359CD /* 1-Home */ = {
+			isa = PBXGroup;
+			children = (
+				140E87F729C1F22F00E359CD /* HomeViewController */,
+			);
+			path = "1-Home";
+			sourceTree = "<group>";
+		};
+		140E881729C2231800E359CD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				140E87EA29C1ECD700E359CD /* TabController */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		140E881829C2232A00E359CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				140E881929C2233200E359CD /* HomeViewModel.swift */,
+				140E881B29C230A000E359CD /* MoviesGridCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		140E882229C2354600E359CD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				140E882329C2354F00E359CD /* ImageSize.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -538,24 +607,31 @@
 				140E87D729C1EA2A00E359CD /* Representables.swift in Sources */,
 				140E87D329C1EA2A00E359CD /* AppCoordinator.swift in Sources */,
 				140E873629C1D88900E359CD /* HomeViewController.swift in Sources */,
+				140E880B29C2081E00E359CD /* MoviesRequest.swift in Sources */,
 				140E87EC29C1ECF700E359CD /* VO2TabController.swift in Sources */,
 				140E879529C1E4F800E359CD /* EndPointType.swift in Sources */,
+				140E882429C2354F00E359CD /* ImageSize.swift in Sources */,
 				140E880129C1F87B00E359CD /* VO2Data.swift in Sources */,
+				140E882029C234A500E359CD /* Constants.swift in Sources */,
 				140E87D029C1EA2A00E359CD /* UIActivityIndicator+Extensions.swift in Sources */,
 				140E876E29C1E3A800E359CD /* Engine.swift in Sources */,
 				140E87D929C1EA2A00E359CD /* Spawnable.swift in Sources */,
 				140E877529C1E42F00E359CD /* VO2Error.swift in Sources */,
-				140E87D829C1EA2A00E359CD /* ShadowWrapped.swift in Sources */,
+				140E881C29C230A000E359CD /* MoviesGridCellViewModel.swift in Sources */,
+				140E881A29C2233200E359CD /* HomeViewModel.swift in Sources */,
 				140E87CE29C1EA2A00E359CD /* UIViewController+Shadows.swift in Sources */,
 				140E873229C1D88900E359CD /* AppDelegate.swift in Sources */,
-				140E87D129C1EA2A00E359CD /* Reusable.swift in Sources */,
 				140E87CF29C1EA2A00E359CD /* HideBackTitleNavigationController.swift in Sources */,
 				140E87D229C1EA2A00E359CD /* UIViewController+Alerts.swift in Sources */,
 				140E877929C1E47100E359CD /* MoviesNetworkService.swift in Sources */,
 				140E877729C1E45C00E359CD /* MoviesService.swift in Sources */,
+				140E880D29C21EDD00E359CD /* UICollectionView+Extension.swift in Sources */,
+				140E881329C221DC00E359CD /* Reusables.swift in Sources */,
 				140E879429C1E4F800E359CD /* VO2EndPoints.swift in Sources */,
+				140E881129C2201900E359CD /* MoviesGridCell.swift in Sources */,
 				140E87FD29C1F78B00E359CD /* MoviesModel.swift in Sources */,
 				140E879729C1E4F800E359CD /* VO2NetworkClient.swift in Sources */,
+				140E880829C2079300E359CD /* Encodable+Extensions.swift in Sources */,
 				140E87D429C1EA2A00E359CD /* HomeCoordinator.swift in Sources */,
 				140E880329C201FE00E359CD /* Results.swift in Sources */,
 			);

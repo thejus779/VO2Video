@@ -15,20 +15,14 @@ class MoviesNetworkService: MoviesService {
         self.networkClient = networkClient
     }
     
-    func getPopularMovies(pageNo: Int, completion: @escaping ResultCallback<VO2Data<Movies>>) {
+    func getPopularMovies(pageNo: Int, completion: @escaping ResultCallback<VO2Data<Movie>>) {
         
         let endpoint = VO2EndPoints.getPopularMovies
-        // 1. Set pageNo as paramters
-        var parameters: [String : Any] = ["page": pageNo]
-        parameters["api_key"] = endpoint.apiKey
-        
-        // TODO: parameter
-        
-        
+
         // get all popular movies network call
         networkClient?.request(
             endpoint: VO2EndPoints.getPopularMovies,
-            parameters: parameters,
+            parameters: MoviesRequest(page: pageNo, apiKey: endpoint.apiKey).toJSONDict,
             completion: { result in
                 switch result {
                 case .success(data: let data):
@@ -39,7 +33,8 @@ class MoviesNetworkService: MoviesService {
                             df.dateFormat = "yyyy-MM-d"
                             decoder.dateDecodingStrategy = .formatted(df)
                             
-                            let popularMovies = try decoder.decode(VO2Data<Movies>.self, from: data)
+                            let popularMovies = try decoder.decode(VO2Data<Movie>.self, from: data)
+                            
                             completion(.success(popularMovies))
                             print("[MoviesNetworkService] getPopularMovies success for page \(pageNo)")
                         } catch let error {

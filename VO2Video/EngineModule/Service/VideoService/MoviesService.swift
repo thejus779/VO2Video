@@ -13,5 +13,5 @@ protocol MoviesService: AnyObject {
     init(networkClient: VO2NetworkClient?)
     
     /// get all movies with pagination handling
-    func getPopularMovies(pageNo: Int, completion: @escaping ResultCallback<VO2Data<Movies>>)
+    func getPopularMovies(pageNo: Int, completion: @escaping ResultCallback<VO2Data<Movie>>)
 }

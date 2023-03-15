@@ -24,9 +24,9 @@ class HomeCoordinator: NSObject, NavigatorPresentable {
         // View Controller
         
         let homeVC = HomeViewController.spawn(
-            homeCoordinatorDelegate: self
+            homeCoordinatorDelegate: self, viewModel: HomeViewModel(engine: engine)
         )
-        homeVC.title = "Test"
+        homeVC.title = R.string.localizable.homeTitle()
         navigationController.setViewControllers([homeVC], animated: false)
     }
 }
@@ -39,6 +39,6 @@ extension HomeCoordinator: TabBarRepresentable {
         UIImage(systemName: "video.circle")!
     }
     var title: String {
-        return "Title"
+        return R.string.localizable.homeTabTitle()
     }
 }

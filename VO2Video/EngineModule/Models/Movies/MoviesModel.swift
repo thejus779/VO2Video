@@ -7,11 +7,10 @@
 
 import Foundation
 
-struct Movies: Codable {
+struct Movie: Codable {
     let adult: Bool?
     let backgroundImagePath: String?
     let id: Int64
-    let originalLanguage: Language?
     let overview: String?
     let rating: Double?
     let title: String?
@@ -22,7 +21,6 @@ struct Movies: Codable {
         case id
         case adult
         case backgroundImagePath = "backdrop_path"
-        case originalLanguage = "original_language"
         case overview
         case rating = "vote_average"
         case title
@@ -30,8 +28,20 @@ struct Movies: Codable {
         case posterPath = "poster_path"
     }
 }
-enum Language: String, Codable {
-    case eglish = "en"
-    case french = "fr"
-    case unknown
+
+extension Movie {
+    func constructedURL(imageSize: ImageSize, pathToAppend: String) -> URL? {
+        if let url = K.baseImagePath(imageSize: imageSize) {
+            return url.appending(path: pathToAppend)
+        }
+        return nil
+    }
+    func backgroundImageURL(imageSize: ImageSize) -> URL? {
+        guard let backgroundImagePath else { return nil }
+        return constructedURL(imageSize: imageSize, pathToAppend: backgroundImagePath)
+    }
+    func posterImageSize(imageSize: ImageSize) -> URL? {
+        guard let posterPath else { return nil }
+        return constructedURL(imageSize: imageSize, pathToAppend: posterPath)
+    }
 }

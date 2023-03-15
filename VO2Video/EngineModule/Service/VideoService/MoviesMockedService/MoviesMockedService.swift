@@ -15,6 +15,6 @@ class MoviesMockedService: MoviesService {
         self.networkClient = networkClient
     }
     
-    func getPopularMovies(pageNo: Int, completion: @escaping ResultCallback<VO2Data<Movies>>) {
+    func getPopularMovies(pageNo: Int, completion: @escaping ResultCallback<VO2Data<Movie>>) {
     }
 }

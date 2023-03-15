@@ -15,3 +15,6 @@
 "common.noinfo" = "No data available";
 "common.yes" = "YES";
 "common.no" = "NO";
+
+"home.tab.title" = "Movies";
+"home.title" = "Popular Movies";

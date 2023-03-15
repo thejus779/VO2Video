@@ -24,9 +24,7 @@ enum VO2EndPoints: EndpointType {
         }
     }
     var baseUrl: URL {
-        guard let url = URL(string: "https://api.themoviedb.org/")
-        else { fatalError("Invalid url") }
-        return url
+        return K.baseAPIPath
     }
     var version: Int {
         switch self {
