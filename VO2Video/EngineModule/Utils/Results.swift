@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias ResultCallback<T> = (Result<T, VO2Error>) -> Void
+typealias ResultCallback<T> = (Result<T, Error>) -> Void
 
 enum NetworkResult {
     case success(data: Data?)
