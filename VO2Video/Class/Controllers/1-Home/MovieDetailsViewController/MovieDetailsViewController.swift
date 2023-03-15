@@ -71,7 +71,6 @@ class MovieDetailsViewController: UIViewController, Spawnable {
         ratingContainer.addSubview(ratingsView)
         NSLayoutConstraint.activate([
             ratingsView.leadingAnchor.constraint(equalTo: ratingContainer.leadingAnchor),
-            ratingsView.trailingAnchor.constraint(equalTo: ratingContainer.trailingAnchor),
             ratingsView.topAnchor.constraint(equalTo: ratingContainer.topAnchor),
             ratingsView.bottomAnchor.constraint(equalTo: ratingContainer.bottomAnchor)
         ])
