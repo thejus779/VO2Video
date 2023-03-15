@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RatingsView" customModule="VO2Video" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLb-px-mH7">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" placeholder="YES" id="QGo-5U-9Cj"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="mLb-px-mH7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LBl-ug-3bk"/>
+                <constraint firstAttribute="bottom" secondItem="mLb-px-mH7" secondAttribute="bottom" id="dQd-dy-cIK"/>
+                <constraint firstItem="mLb-px-mH7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="doV-y4-a9l"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mLb-px-mH7" secondAttribute="trailing" id="u2x-ed-2z4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="stackView" destination="mLb-px-mH7" id="SmM-ct-XgG"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="21"/>
+        </view>
+    </objects>
+</document>

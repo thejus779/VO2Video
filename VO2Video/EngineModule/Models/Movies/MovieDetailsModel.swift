@@ -8,7 +8,8 @@
 import Foundation
 
 struct MovieDetails: Codable, MovieProtocol {
-    let id: Int64
+    
+    let id: Int
     let overview: String?
     let rating: Double?
     let title: String?

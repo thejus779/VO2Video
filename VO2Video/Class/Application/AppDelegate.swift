@@ -36,9 +36,9 @@ extension AppDelegate {
         appearance.backgroundColor = color
         appearance.titleTextAttributes = [
             .font: UIFont.boldSystemFont(ofSize: 18.0),
-            .foregroundColor: UIColor.systemRed
+            .foregroundColor: UIColor.white
         ]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.red]
         
         navBarAppearance.standardAppearance = appearance
         navBarAppearance.scrollEdgeAppearance = appearance

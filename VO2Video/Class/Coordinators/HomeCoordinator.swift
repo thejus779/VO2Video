@@ -36,16 +36,9 @@ class HomeCoordinator: NSObject, NavigatorPresentable {
 extension HomeCoordinator: HomeCoordinatorDelegate {
     func showDetails(of movie: MovieDetails) {
         let movieDetailsViewController = MovieDetailsViewController.spawn(
-            viewModel: MovieDetailsViewModel(movie: movie), delegate: self
+            viewModel: MovieDetailsViewModel(engine: engine, movie: movie)
         )
         navigationController.present(movieDetailsViewController, animated: true)
-    }
-}
-
-extension HomeCoordinator: MovieDetailsViewControllerDelegate {
-    func movieDetailsViewController(_ controller: MovieDetailsViewController, addedToFavourite movieDetails: MovieDetails) {
-        homeViewController?.viewModel.addMovieToFavourite(movieDetails: movieDetails)
-        homeViewController?.reloadData()
     }
 }
 extension HomeCoordinator: TabBarRepresentable {

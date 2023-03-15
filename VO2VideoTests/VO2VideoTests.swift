@@ -6,7 +6,6 @@
 //
 
 import XCTest
-@testable import VO2Video
 
 final class VO2VideoTests: XCTestCase {
 

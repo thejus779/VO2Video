@@ -7,17 +7,26 @@
 
 import Foundation
 
-struct MovieDetailsViewModel {
-    let movie: MovieDetails
+class MovieDetailsViewModel {
+    var movie: MovieDetails
+    let engine: Engine
     
-    init(movie: MovieDetails) {
+    init(engine: Engine, movie: MovieDetails) {
         self.movie = movie
+        self.engine = engine
     }
     
     var name: String? { movie.title }
     var description: String? { movie.overview }
     var rating: Double? { movie.rating }
-    var releaseDate: Date? { movie.releaseDate }
+    
+    var releaseDateString: String? {
+        guard let releaseDate = movie.releaseDate else { return nil }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        return dateFormatter.string(from: releaseDate)
+    }
+    
     var isFavourite: Bool {
         movie.isFavourite
     }
@@ -31,4 +40,8 @@ struct MovieDetailsViewModel {
     }
     var posterImage: URL? { movie.posterImage(of: .large) }
     
+    func updateFavouriteState() {
+        movie.isFavourite.toggle()
+        engine.moviesService.updateFavouriteState(movieId: movie.id, isFavourite: movie.isFavourite)
+    }
 }

@@ -9,6 +9,8 @@ import Foundation
 
 class MoviesNetworkService: MoviesService {
     
+    var observers: WeakObserverOrderedSet<MoviesServiceObserver>
+    
     var networkClient: VO2NetworkClient?
     
     static let moviesDecoder: JSONDecoder = {
@@ -21,6 +23,7 @@ class MoviesNetworkService: MoviesService {
     
     required init(networkClient: VO2NetworkClient?) {
         self.networkClient = networkClient
+        observers = WeakObserverOrderedSet<MoviesServiceObserver>()
     }
     
     func getPopularMovies(pageNo: Int, completion: @escaping ResultCallback<VO2Data<Movie>>) {
@@ -84,5 +87,10 @@ class MoviesNetworkService: MoviesService {
                 }
             }
         )
+    }
+    func updateFavouriteState(movieId: Int, isFavourite: Bool) {
+        observers.invoke {
+            $0.onFavouriteStateUpdated(movieId: movieId, isFavourite: isFavourite)
+        }
     }
 }

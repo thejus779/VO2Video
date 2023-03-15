@@ -18,6 +18,9 @@ class HomeViewModel {
     init(engine: Engine) {
         self.engine = engine
     }
+    func registerObservers(observer: MoviesServiceObserver) {
+        engine.moviesService.register(observer: observer)
+    }
     
     // Get all popular movies
     func getAllPopularMovies(completion: @escaping ResultCallback<VO2Data<Movie>>)  {
@@ -75,11 +78,9 @@ class HomeViewModel {
         ) { result in
             switch result {
             case .success(var movieDetails):
-                
-                // adding to favourite is managed locally
+                // is favourite is locally handled
                 movieDetails.isFavourite = movie.isFavourite
                 completion(movieDetails, nil)
-                
             case .failure(let error):
                 print("Failed with error \(error)")
                 completion(nil, error)
@@ -87,9 +88,9 @@ class HomeViewModel {
         }
     }
     
-    func addMovieToFavourite(movieDetails: MovieDetails) {
-        if let index = allPopularMovies?.firstIndex(where: { $0.id == movieDetails.id }) {
-            allPopularMovies?[index].isFavourite = movieDetails.isFavourite
+    func updateMovieFavouriteState(movieId: Int, isFavourite: Bool) {
+        if let index = allPopularMovies?.firstIndex(where: { $0.id == movieId }) {
+            allPopularMovies?[index].isFavourite = isFavourite
         }
     }
 }

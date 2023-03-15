@@ -29,6 +29,8 @@ class HomeViewController: UIViewController, Spawnable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.registerObservers(observer: self)
         configureCollectionViewLayout()
         loadData()
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -61,7 +63,7 @@ class HomeViewController: UIViewController, Spawnable {
     }
     
     // Reload data
-    func reloadData() {
+    private func reloadData() {
         loader.hideLoader()
         
         moviesCollectionView.isHidden = viewModel.allPopularMovies?.isEmpty ?? true
@@ -113,5 +115,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
             self?.reloadData()
         }
+    }
+}
+extension HomeViewController: MoviesServiceObserver {
+    func onFavouriteStateUpdated(movieId: Int, isFavourite: Bool) {
+        viewModel.updateMovieFavouriteState(movieId: movieId, isFavourite: isFavourite)
+        reloadData()
     }
 }
