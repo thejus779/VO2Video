@@ -22,9 +22,9 @@ class MoviesGridCell: UICollectionViewCell {
     
     func configure(viewModel: MoviesGridCellViewModel) {
         titleLabel.text = viewModel.name
-        descriptionLabel.text = viewModel.species
+        descriptionLabel.text = viewModel.description
         posterImageView.sd_setImage(
-            with: viewModel.backgroundImage,
+            with: viewModel.posterImage,
             completed: nil
         )
     }

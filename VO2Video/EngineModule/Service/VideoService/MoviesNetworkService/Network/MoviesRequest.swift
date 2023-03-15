@@ -16,3 +16,11 @@ struct MoviesRequest: Codable {
         case apiKey = "api_key"
     }
 }
+
+struct MovieDetailsRequest: Codable {
+    let apiKey: String
+    
+    enum CodingKeys: String, CodingKey {
+        case apiKey = "api_key"
+    }
+}

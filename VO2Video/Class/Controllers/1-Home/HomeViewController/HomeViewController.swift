@@ -31,8 +31,17 @@ class HomeViewController: UIViewController, Spawnable {
         super.viewDidLoad()
         configureCollectionViewLayout()
         loadData()
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.largeTitleDisplayMode = .always
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationItem.largeTitleDisplayMode = .never
+    }
     func configureCollectionViewLayout() {
         moviesCollectionView.collectionViewLayout = moviesCollectionView.gridLayout()
     }
@@ -52,7 +61,7 @@ class HomeViewController: UIViewController, Spawnable {
     }
     
     // Reload data
-    private func reloadData() {
+    func reloadData() {
         loader.hideLoader()
         
         moviesCollectionView.isHidden = viewModel.allPopularMovies?.isEmpty ?? true
@@ -84,6 +93,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let movie = viewModel.allPopularMovies?[indexPath.row] {
+            viewModel.getDetailsOf(movie: movie) { [weak self] (details, error) in
+                if let details {
+                    self?.homeCoordinatorDelegate?.showDetails(of: details)
+                } else {
+                    self?.presentAlert(message: error?.localizedDescription, completion: nil)
+                }
+            }
+        }
+       
     }
     private func loadMore() {
         viewModel.loadMorePopularMoviesIfNeeded { [weak self] error in

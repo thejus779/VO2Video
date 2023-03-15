@@ -11,6 +11,14 @@ class MoviesNetworkService: MoviesService {
     
     var networkClient: VO2NetworkClient?
     
+    static let moviesDecoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-d"
+        decoder.dateDecodingStrategy = .formatted(df)
+        return decoder
+    }()
+    
     required init(networkClient: VO2NetworkClient?) {
         self.networkClient = networkClient
     }
@@ -21,19 +29,14 @@ class MoviesNetworkService: MoviesService {
 
         // get all popular movies network call
         networkClient?.request(
-            endpoint: VO2EndPoints.getPopularMovies,
+            endpoint: endpoint,
             parameters: MoviesRequest(page: pageNo, apiKey: endpoint.apiKey).toJSONDict,
             completion: { result in
                 switch result {
                 case .success(data: let data):
                     if let data = data {
                         do {
-                            let decoder = JSONDecoder()
-                            let df = DateFormatter()
-                            df.dateFormat = "yyyy-MM-d"
-                            decoder.dateDecodingStrategy = .formatted(df)
-                            
-                            let popularMovies = try decoder.decode(VO2Data<Movie>.self, from: data)
+                            let popularMovies = try Self.moviesDecoder.decode(VO2Data<Movie>.self, from: data)
                             
                             completion(.success(popularMovies))
                             print("[MoviesNetworkService] getPopularMovies success for page \(pageNo)")
@@ -48,6 +51,36 @@ class MoviesNetworkService: MoviesService {
                 case .error(let error):
                     completion(.failure(error))
                     print("[MoviesNetworkService] getPopularMovies error: \(error)")
+                }
+            }
+        )
+    }
+    func getDetailsOf(movieId: Int, completion: @escaping ResultCallback<MovieDetails>) {
+        let endpoint = VO2EndPoints.getMovieDetails(id: movieId)
+
+        networkClient?.request(
+            endpoint: endpoint,
+            parameters: MovieDetailsRequest(apiKey: endpoint.apiKey).toJSONDict,
+            completion: { result in
+                switch result {
+                case .success(data: let data):
+                    if let data = data {
+                        do {
+                            let movieDetails = try Self.moviesDecoder.decode(MovieDetails.self, from: data)
+                            
+                            completion(.success(movieDetails))
+                            print("[MoviesNetworkService] getDetailsOf \(movieId) success")
+                        } catch let error {
+                            completion(.failure(error))
+                            print("[MoviesNetworkService] getDetailsOf \(movieId) decoding error: \(error)")
+                        }
+                    } else {
+                        completion(.failure(VO2Error.noData))
+                        print("[MoviesNetworkService] getDetailsOf \(movieId) no data")
+                    }
+                case .error(let error):
+                    completion(.failure(error))
+                    print("[MoviesNetworkService] getDetailsOf \(movieId) error: \(error)")
                 }
             }
         )

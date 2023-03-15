@@ -10,6 +10,14 @@ import UIKit
 extension UICollectionView {
     func gridLayout(edgeInset: NSDirectionalEdgeInsets =  NSDirectionalEdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4)) -> UICollectionViewCompositionalLayout {
 
+        let largeItem = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(0.38)
+            )
+        )
+        largeItem.contentInsets = edgeInset
+        
         // Group with 2 items
         let doubleGroupItem1 = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
@@ -21,7 +29,7 @@ extension UICollectionView {
         let doubleGroup = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
-                heightDimension: .fractionalHeight(0.55)
+                heightDimension: .fractionalHeight(0.33)
             ),
             subitems: [doubleGroupItem1]
         )
@@ -34,13 +42,13 @@ extension UICollectionView {
         let tripleGroup = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
-                heightDimension: .fractionalHeight(0.45)
+                heightDimension: .fractionalHeight(0.28)
             ),
             subitems: [tripleGroupItem1]
         )
 
 
-        let mainGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(480)), subitems: [doubleGroup, tripleGroup])
+        let mainGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(800)), subitems: [largeItem, doubleGroup, tripleGroup])
 
         let section = NSCollectionLayoutSection(group: mainGroup)
         let gridLayout = UICollectionViewCompositionalLayout(section: section)

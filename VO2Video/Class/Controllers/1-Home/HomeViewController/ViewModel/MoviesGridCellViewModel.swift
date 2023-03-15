@@ -15,8 +15,8 @@ struct MoviesGridCellViewModel {
         self.movie = movie
     }
     var name: String? { movie.title }
-    var species: String? { movie.overview }
-    var backgroundImage: URL? { movie.backgroundImageURL(imageSize: .medium) }
+    var description: String? { movie.overview }
+    var posterImage: URL? { movie.posterImage(of: .medium) }
 
 }
 

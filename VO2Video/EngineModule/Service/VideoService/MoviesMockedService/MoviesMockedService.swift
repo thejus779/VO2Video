@@ -17,4 +17,7 @@ class MoviesMockedService: MoviesService {
     
     func getPopularMovies(pageNo: Int, completion: @escaping ResultCallback<VO2Data<Movie>>) {
     }
+    func getDetailsOf(movieId: Int, completion: @escaping ResultCallback<MovieDetails>) {
+        
+    }
 }

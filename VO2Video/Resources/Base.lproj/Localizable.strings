@@ -18,3 +18,5 @@
 
 "home.tab.title" = "Movies";
 "home.title" = "Popular Movies";
+
+"movie.details.runtime" = "%d mins";

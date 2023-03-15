@@ -9,17 +9,20 @@ import Foundation
 
 enum VO2EndPoints: EndpointType {
     case getPopularMovies
+    case getMovieDetails(id: Int)
     
     var path: String {
         switch self {
         case .getPopularMovies:
             return "\(version)/movie/popular"
+        case .getMovieDetails(let movieId):
+            return "\(version)/movie/\(movieId)"
         }
     }
     
     var verb: HTTPVerb {
         switch self {
-        case .getPopularMovies:
+        case .getPopularMovies, .getMovieDetails:
             return .get
         }
     }

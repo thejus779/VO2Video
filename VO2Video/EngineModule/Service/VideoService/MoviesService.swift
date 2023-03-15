@@ -14,4 +14,7 @@ protocol MoviesService: AnyObject {
     
     /// get all movies with pagination handling
     func getPopularMovies(pageNo: Int, completion: @escaping ResultCallback<VO2Data<Movie>>)
+    
+    /// get movie details matching id
+    func getDetailsOf(movieId: Int, completion: @escaping ResultCallback<MovieDetails>)
 }

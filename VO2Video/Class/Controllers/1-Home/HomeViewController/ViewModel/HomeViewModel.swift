@@ -35,7 +35,7 @@ class HomeViewModel {
         }
     }
 
-    func loadMorePopularMoviesIfNeeded(completion: @escaping (Error?) -> Void )  {
+    func loadMorePopularMoviesIfNeeded(completion: @escaping (Error?) -> Void)  {
         guard currentPage < responseData?.totalPages ?? 0
         else {
             // All data loaded alraedy
@@ -66,6 +66,30 @@ class HomeViewModel {
                 print("Failed with error \(error)")
                 completion(error)
             }
+        }
+    }
+    
+    func getDetailsOf(movie: Movie, completion: @escaping (MovieDetails?, Error?) -> Void) {
+        engine.moviesService.getDetailsOf(
+            movieId: movie.id
+        ) { result in
+            switch result {
+            case .success(var movieDetails):
+                
+                // adding to favourite is managed locally
+                movieDetails.isFavourite = movie.isFavourite
+                completion(movieDetails, nil)
+                
+            case .failure(let error):
+                print("Failed with error \(error)")
+                completion(nil, error)
+            }
+        }
+    }
+    
+    func addMovieToFavourite(movieDetails: MovieDetails) {
+        if let index = allPopularMovies?.firstIndex(where: { $0.id == movieDetails.id }) {
+            allPopularMovies?[index].isFavourite = movieDetails.isFavourite
         }
     }
 }

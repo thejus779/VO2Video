@@ -26,18 +26,21 @@ class VO2TabController: UITabBarController {
         let item = UITabBarItemAppearance()
         item.normal.titleTextAttributes = [.foregroundColor: UIColor.lightGray]
         item.normal.iconColor = UIColor.lightGray
-        item.selected.titleTextAttributes = [.foregroundColor: UIColor.darkGray]
-        item.selected.iconColor = UIColor.darkGray
+        item.selected.titleTextAttributes = [.foregroundColor: UIColor.systemRed]
+        item.selected.iconColor = UIColor.systemRed
+        
+
         
         let app = UITabBarAppearance()
         app.configureWithOpaqueBackground()
-        app.backgroundColor = .white
+        app.backgroundColor = .black.withAlphaComponent(0.92)
         app.stackedLayoutAppearance = item
         app.inlineLayoutAppearance = item
         app.compactInlineLayoutAppearance = item
         
         tabBar.standardAppearance = app
         tabBar.scrollEdgeAppearance = app
-
+        
     }
+    
 }
