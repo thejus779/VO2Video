@@ -2,7 +2,7 @@
 //  VO2VideoUITestsLaunchTests.swift
 //  VO2VideoUITests
 //
-//  Created by Shiny on 15/03/2023.
+//  Created by Thejus on 15/03/2023.
 //
 
 import XCTest
