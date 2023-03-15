@@ -4,8 +4,7 @@
 //
 //  Created by Thejus on 15/03/2023.
 //
-
-import 
+ 
 import Foundation
 
 class Engine {
@@ -20,7 +19,8 @@ class Engine {
         mockNetworkClient: VO2NetworkClient? = nil
     ) {
         // Network client
-        self.networkClient = mockNetworkClient ?? RMNetworkClient()
+        let networkClient = mockNetworkClient ?? VO2NetworkClient()
+        self.networkClient = networkClient
         
         // VideoService
         self.videoService = mockVideoService ?? VideoNetworkService(networkClient: networkClient)

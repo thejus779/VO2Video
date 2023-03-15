@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		140E873229C1D88900E359CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E873129C1D88900E359CD /* AppDelegate.swift */; };
-		140E873629C1D88900E359CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E873529C1D88900E359CD /* ViewController.swift */; };
+		140E873629C1D88900E359CD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E873529C1D88900E359CD /* HomeViewController.swift */; };
 		140E873929C1D88900E359CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140E873729C1D88900E359CD /* Main.storyboard */; };
 		140E873B29C1D88B00E359CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140E873A29C1D88B00E359CD /* Assets.xcassets */; };
 		140E873E29C1D88B00E359CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140E873C29C1D88B00E359CD /* LaunchScreen.storyboard */; };
@@ -37,6 +37,7 @@
 		140E87D829C1EA2A00E359CD /* ShadowWrapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87AB29C1EA2A00E359CD /* ShadowWrapped.swift */; };
 		140E87D929C1EA2A00E359CD /* Spawnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87AC29C1EA2A00E359CD /* Spawnable.swift */; };
 		140E87EC29C1ECF700E359CD /* VO2TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E87EB29C1ECF700E359CD /* VO2TabController.swift */; };
+		140E87F329C1EF6B00E359CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 140E87F129C1EF6B00E359CD /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +60,7 @@
 /* Begin PBXFileReference section */
 		140E872E29C1D88900E359CD /* VO2Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VO2Video.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		140E873129C1D88900E359CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		140E873529C1D88900E359CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		140E873529C1D88900E359CD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		140E873829C1D88900E359CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		140E873A29C1D88B00E359CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		140E873D29C1D88B00E359CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		140E87AB29C1EA2A00E359CD /* ShadowWrapped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowWrapped.swift; sourceTree = "<group>"; };
 		140E87AC29C1EA2A00E359CD /* Spawnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spawnable.swift; sourceTree = "<group>"; };
 		140E87EB29C1ECF700E359CD /* VO2TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VO2TabController.swift; sourceTree = "<group>"; };
+		140E87F229C1EF6B00E359CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,13 +143,10 @@
 		140E873029C1D88900E359CD /* VO2Video */ = {
 			isa = PBXGroup;
 			children = (
+				140E87EF29C1EF2D00E359CD /* Resources */,
 				140E879D29C1E92A00E359CD /* Class */,
 				140E876B29C1E39200E359CD /* EngineModule */,
-				140E876A29C1E37100E359CD /* Application */,
-				140E873529C1D88900E359CD /* ViewController.swift */,
-				140E873729C1D88900E359CD /* Main.storyboard */,
 				140E873A29C1D88B00E359CD /* Assets.xcassets */,
-				140E873C29C1D88B00E359CD /* LaunchScreen.storyboard */,
 				140E873F29C1D88B00E359CD /* Info.plist */,
 			);
 			path = VO2Video;
@@ -277,6 +276,7 @@
 		140E879D29C1E92A00E359CD /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				140E876A29C1E37100E359CD /* Application */,
 				140E87AD29C1EA2A00E359CD /* Controllers */,
 				140E87A429C1EA2A00E359CD /* Coordinators */,
 				140E879E29C1EA2A00E359CD /* Extensions */,
@@ -319,6 +319,7 @@
 		140E87AD29C1EA2A00E359CD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				140E87F729C1F22F00E359CD /* HomeViewController */,
 				140E87EA29C1ECD700E359CD /* TabController */,
 			);
 			path = Controllers;
@@ -330,6 +331,32 @@
 				140E87EB29C1ECF700E359CD /* VO2TabController.swift */,
 			);
 			path = TabController;
+			sourceTree = "<group>";
+		};
+		140E87EF29C1EF2D00E359CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				140E87F029C1EF4700E359CD /* Base.lproj */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		140E87F029C1EF4700E359CD /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				140E873C29C1D88B00E359CD /* LaunchScreen.storyboard */,
+				140E87F129C1EF6B00E359CD /* Localizable.strings */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		140E87F729C1F22F00E359CD /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				140E873729C1D88900E359CD /* Main.storyboard */,
+				140E873529C1D88900E359CD /* HomeViewController.swift */,
+			);
+			path = HomeViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +373,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				140E87EE29C1EEE200E359CD /* PBXTargetDependency */,
 			);
 			name = VO2Video;
 			packageProductDependencies = (
@@ -445,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140E873E29C1D88B00E359CD /* LaunchScreen.storyboard in Resources */,
+				140E87F329C1EF6B00E359CD /* Localizable.strings in Resources */,
 				140E873B29C1D88B00E359CD /* Assets.xcassets in Resources */,
 				140E873929C1D88900E359CD /* Main.storyboard in Resources */,
 			);
@@ -475,7 +504,7 @@
 				140E879629C1E4F800E359CD /* NetworkClient.swift in Sources */,
 				140E87D729C1EA2A00E359CD /* Representables.swift in Sources */,
 				140E87D329C1EA2A00E359CD /* AppCoordinator.swift in Sources */,
-				140E873629C1D88900E359CD /* ViewController.swift in Sources */,
+				140E873629C1D88900E359CD /* HomeViewController.swift in Sources */,
 				140E87EC29C1ECF700E359CD /* VO2TabController.swift in Sources */,
 				140E879529C1E4F800E359CD /* EndPointType.swift in Sources */,
 				140E87D029C1EA2A00E359CD /* UIActivityIndicator+Extensions.swift in Sources */,
@@ -526,6 +555,10 @@
 			target = 140E872D29C1D88900E359CD /* VO2Video */;
 			targetProxy = 140E874F29C1D88B00E359CD /* PBXContainerItemProxy */;
 		};
+		140E87EE29C1EEE200E359CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 140E87ED29C1EEE200E359CD /* RswiftGenerateInternalResources */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -543,6 +576,14 @@
 				140E873D29C1D88B00E359CD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		140E87F129C1EF6B00E359CD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				140E87F229C1EF6B00E359CD /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -673,7 +714,6 @@
 				INFOPLIST_FILE = VO2Video/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -700,7 +740,6 @@
 				INFOPLIST_FILE = VO2Video/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -858,6 +897,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 140E876729C1E35400E359CD /* XCRemoteSwiftPackageReference "R" */;
 			productName = RswiftLibrary;
+		};
+		140E87ED29C1EEE200E359CD /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

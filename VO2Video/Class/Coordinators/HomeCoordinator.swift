@@ -22,6 +22,12 @@ class HomeCoordinator: NSObject, NavigatorPresentable {
         super.init()
                 
         // View Controller
+        
+        let homeVC = HomeViewController.spawn(
+            homeCoordinatorDelegate: self
+        )
+        homeVC.title = "Test"
+        navigationController.setViewControllers([homeVC], animated: false)
     }
 }
 

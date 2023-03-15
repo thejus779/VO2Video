@@ -17,13 +17,13 @@ enum VO2Error: LocalizedError, Equatable {
     public var errorDescription: String? {
         switch self {
         case .codingError:
-            return "Coding Error"
+            return R.string.localizable.commonErrorCoding()
         case .unknown:
-            return "Unknown Error"
+            return R.string.localizable.commonErrorUnknown()
         case .noData:
-            return "No Data"
+            return R.string.localizable.commonErrorNoData()
         case .serverError:
-            return "Server Error"
+            return R.string.localizable.commonErrorServerError()
         }
     }
 }
