@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MoviesRequest: Codable {
+struct MoviesRequest: Encodable {
     let page: Int
     let apiKey: String
     
@@ -17,7 +17,7 @@ struct MoviesRequest: Codable {
     }
 }
 
-struct MovieDetailsRequest: Codable {
+struct MovieDetailsRequest: Encodable {
     let apiKey: String
     
     enum CodingKeys: String, CodingKey {

@@ -194,7 +194,6 @@
 				140E87EF29C1EF2D00E359CD /* Resources */,
 				140E879D29C1E92A00E359CD /* Class */,
 				140E876B29C1E39200E359CD /* EngineModule */,
-				140E873A29C1D88B00E359CD /* Assets.xcassets */,
 				140E873F29C1D88B00E359CD /* Info.plist */,
 			);
 			path = VO2Video;
@@ -304,8 +303,8 @@
 		140E878229C1E4F800E359CD /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
-				140E878329C1E4F800E359CD /* VO2EndPoints */,
 				140E878529C1E4F800E359CD /* EndPointType.swift */,
+				140E878329C1E4F800E359CD /* VO2EndPoints */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -392,6 +391,8 @@
 		140E87EF29C1EF2D00E359CD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				140E873A29C1D88B00E359CD /* Assets.xcassets */,
+				140E873C29C1D88B00E359CD /* LaunchScreen.storyboard */,
 				140E87F029C1EF4700E359CD /* Base.lproj */,
 			);
 			path = Resources;
@@ -400,7 +401,6 @@
 		140E87F029C1EF4700E359CD /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				140E873C29C1D88B00E359CD /* LaunchScreen.storyboard */,
 				140E87F129C1EF6B00E359CD /* Localizable.strings */,
 			);
 			path = Base.lproj;

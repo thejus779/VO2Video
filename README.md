@@ -1,6 +1,6 @@
 # VO2_VIDEO_ASSIGNMENT_THEJUS
 
-Welcome to VO2Video app, a basic app which displays a collection of Popular movies. It let's the user see further details of the movie and add the movie to favourites. The application uses UICollectionViewCompositionalLayout to display the list of movies. The main idea when developing the application was to give equal importance to UI and architecure, and keep the app as modular as possible.
+Welcome to VO2Video app, a basic app which displays a collection of Popular movies. It lets the user see details of the movie and add the movie to favourites. The application uses UICollectionViewCompositionalLayout to display the list of movies. The main idea when developing the application was to give equal importance to UI and architecure, and keep the app as modular as possible.
 
 ## Pre-requirements
 
