@@ -48,7 +48,13 @@ extension UICollectionView {
         )
 
 
-        let mainGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(800)), subitems: [largeItem, doubleGroup, tripleGroup])
+        let mainGroup = NSCollectionLayoutGroup.vertical(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .absolute(800)
+            ),
+            subitems: [largeItem, doubleGroup, tripleGroup]
+        )
 
         let section = NSCollectionLayoutSection(group: mainGroup)
         let gridLayout = UICollectionViewCompositionalLayout(section: section)

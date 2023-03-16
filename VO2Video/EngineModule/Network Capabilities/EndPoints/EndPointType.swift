@@ -26,6 +26,6 @@ enum HTTPVerb: String {
 }
 extension EndpointType {
     var apiKey: String {
-        return "b1e1b6616ed2694dde8715fb2566a7e6"
+        return K.apiKey
     }
 }

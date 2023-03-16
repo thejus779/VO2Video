@@ -59,6 +59,8 @@
 		140E884F29C2866A00E359CD /* MovieServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E884E29C2866A00E359CD /* MovieServiceTest.swift */; };
 		140E885329C286F700E359CD /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 140E885229C286F700E359CD /* SDWebImage */; };
 		140E885529C286FA00E359CD /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 140E885429C286FA00E359CD /* RswiftLibrary */; };
+		140E885C29C28D9C00E359CD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 140E885B29C28D9C00E359CD /* README.md */; };
+		140E886129C2935200E359CD /* WeakObserverOrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E886029C2935200E359CD /* WeakObserverOrderedSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		140E884829C27E6000E359CD /* AccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessoryView.xib; sourceTree = "<group>"; };
 		140E884A29C27E6900E359CD /* AccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryView.swift; sourceTree = "<group>"; };
 		140E884E29C2866A00E359CD /* MovieServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceTest.swift; sourceTree = "<group>"; };
+		140E885B29C28D9C00E359CD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		140E886029C2935200E359CD /* WeakObserverOrderedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakObserverOrderedSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 		140E872529C1D88900E359CD = {
 			isa = PBXGroup;
 			children = (
+				140E885B29C28D9C00E359CD /* README.md */,
 				140E873029C1D88900E359CD /* VO2Video */,
 				140E874729C1D88B00E359CD /* VO2VideoTests */,
 				140E875129C1D88B00E359CD /* VO2VideoUITests */,
@@ -244,6 +249,7 @@
 		140E876F29C1E3BB00E359CD /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				140E885F29C2934700E359CD /* Observer */,
 				140E877029C1E3D100E359CD /* VideoService */,
 			);
 			path = Service;
@@ -252,9 +258,9 @@
 		140E877029C1E3D100E359CD /* VideoService */ = {
 			isa = PBXGroup;
 			children = (
-				140E877229C1E3F900E359CD /* MoviesMockedService */,
-				140E877129C1E3ED00E359CD /* MoviesNetworkService */,
 				140E877629C1E45C00E359CD /* MoviesService.swift */,
+				140E877129C1E3ED00E359CD /* MoviesNetworkService */,
+				140E877229C1E3F900E359CD /* MoviesMockedService */,
 			);
 			path = VideoService;
 			sourceTree = "<group>";
@@ -518,8 +524,8 @@
 		140E884029C26E1B00E359CD /* RatingsView */ = {
 			isa = PBXGroup;
 			children = (
-				140E883D29C26E1800E359CD /* RatingsView.swift */,
 				140E884129C278D900E359CD /* RatingsView.xib */,
+				140E883D29C26E1800E359CD /* RatingsView.swift */,
 			);
 			path = RatingsView;
 			sourceTree = "<group>";
@@ -538,6 +544,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		140E885F29C2934700E359CD /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				140E886029C2935200E359CD /* WeakObserverOrderedSet.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -660,6 +674,7 @@
 				140E873E29C1D88B00E359CD /* LaunchScreen.storyboard in Resources */,
 				140E87F329C1EF6B00E359CD /* Localizable.strings in Resources */,
 				140E873B29C1D88B00E359CD /* Assets.xcassets in Resources */,
+				140E885C29C28D9C00E359CD /* README.md in Resources */,
 				140E884929C27E6000E359CD /* AccessoryView.xib in Resources */,
 				140E884229C278D900E359CD /* RatingsView.xib in Resources */,
 				140E873929C1D88900E359CD /* Main.storyboard in Resources */,
@@ -700,6 +715,7 @@
 				140E883829C25C4A00E359CD /* HideBackTitleNavigationController.swift in Sources */,
 				140E880129C1F87B00E359CD /* VO2Data.swift in Sources */,
 				140E882029C234A500E359CD /* Constants.swift in Sources */,
+				140E886129C2935200E359CD /* WeakObserverOrderedSet.swift in Sources */,
 				140E87D029C1EA2A00E359CD /* UIActivityIndicator+Extensions.swift in Sources */,
 				140E876E29C1E3A800E359CD /* Engine.swift in Sources */,
 				140E87D929C1EA2A00E359CD /* Spawnable.swift in Sources */,
@@ -843,7 +859,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -897,7 +913,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
