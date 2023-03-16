@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MovieDetailsViewModel {
+struct MovieDetailsViewModel {
     var movie: MovieDetails
     let engine: Engine
     
@@ -40,7 +40,7 @@ class MovieDetailsViewModel {
     }
     var posterImage: URL? { movie.posterImage(of: .large) }
     
-    func updateFavouriteState() {
+    mutating func updateFavouriteState() {
         movie.isFavourite.toggle()
         engine.moviesService.updateFavouriteState(movieId: movie.id, isFavourite: movie.isFavourite)
     }

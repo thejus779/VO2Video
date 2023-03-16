@@ -49,26 +49,26 @@ class NetworkClient {
                 // the request was cancelled by the user, forget about it
                 return
             }
-            forwardResult(.error(error), completion: completion)
+            forwardResult(.failure(error), completion: completion)
             return
         }
         
         guard let httpResponse = response as? HTTPURLResponse else {
-            forwardResult(.error(VO2Error.unknown), completion: completion)
+            forwardResult(.failure(VO2Error.unknown), completion: completion)
             return
         }
         guard httpResponse.statusCode >= 200  else {
-            forwardResult(.error(VO2Error.serverError), completion: completion)
+            forwardResult(.failure(VO2Error.serverError), completion: completion)
             return
         }
         var dataResult: Data?
         if let data, !data.isEmpty {
             dataResult = data
         } else {
-            forwardResult(.error(VO2Error.noData), completion: completion)
+            forwardResult(.failure(VO2Error.noData), completion: completion)
         }
         
-        forwardResult(.success(data: dataResult), completion: completion)
+        forwardResult(.success(dataResult), completion: completion)
     }
     
     // MARK: - Thread Helper to forward the result

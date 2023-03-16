@@ -19,7 +19,7 @@ class MovieDetailsViewController: UIViewController, Spawnable {
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var ratingContainer: UIView!
     @IBOutlet private weak var backgroundImage: UIImageView!
-    @IBOutlet weak var mainStackView: UIStackView!
+    @IBOutlet private weak var mainStackView: UIStackView!
     
     var viewModel: MovieDetailsViewModel!
     var ratingsView = RatingsView.fromNib()

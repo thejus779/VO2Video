@@ -26,13 +26,13 @@ class VO2NetworkClient: NetworkClient {
         )
         
         switch endpoint.verb {
-        case .get, .delete:
+        case .get:
             queryItems = paramsEncoder.encodeToQueryItems()
         default:
             do {
                 body = try paramsEncoder.encodeToData()
             } catch {
-                completion(.error(VO2Error.codingError))
+                completion(.failure(VO2Error.codingError))
             }
         }
         
@@ -41,7 +41,7 @@ class VO2NetworkClient: NetworkClient {
         components?.queryItems = queryItems
         
         guard let finalUrl = components?.url else {
-            completion(.error(VO2Error.unknown))
+            completion(.failure(VO2Error.unknown))
             return nil
         }
         
@@ -50,14 +50,7 @@ class VO2NetworkClient: NetworkClient {
             verb: endpoint.verb,
             httpBody: body,
             headers: headers,
-            completion: { (result) in
-                switch result {
-                case .success(data: let data):
-                    completion(.success(data: data))
-                case .error(let error):
-                    completion(.error(error))
-                }
-            }
+            completion: completion
         )
     }
 }

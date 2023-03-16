@@ -14,7 +14,7 @@ class HomeViewController: UIViewController, Spawnable {
     weak var homeCoordinatorDelegate: HomeCoordinatorDelegate?
     var viewModel: HomeViewModel!
     
-    @IBOutlet weak var moviesCollectionView: UICollectionView!
+    @IBOutlet private weak var moviesCollectionView: UICollectionView!
     @IBOutlet private weak var loader: UIActivityIndicatorView!
     @IBOutlet private weak var noDataLabel: UILabel!
     

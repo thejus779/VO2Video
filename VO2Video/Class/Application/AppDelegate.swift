@@ -30,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     /// Configure Navigation bar general appearance
     func configureNavigationBarAppearance(color: UIColor = .black) {
-        let navBarAppearance = UINavigationBar.appearance()
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()
         appearance.backgroundColor = color
@@ -40,6 +39,7 @@ extension AppDelegate {
         ]
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.red]
         
+        let navBarAppearance = UINavigationBar.appearance()
         navBarAppearance.standardAppearance = appearance
         navBarAppearance.scrollEdgeAppearance = appearance
         navBarAppearance.tintColor = .white

@@ -8,10 +8,5 @@
 import Foundation
 
 typealias ResultCallback<T> = (Result<T, Error>) -> Void
-
-enum NetworkResult {
-    case success(data: Data?)
-    case error(Error)
-}
-
+typealias NetworkResult = Result<Data?, Error>
 typealias NetworkResultCompletion = (NetworkResult) -> Void
